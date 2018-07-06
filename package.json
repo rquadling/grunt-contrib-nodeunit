@@ -13,10 +13,13 @@
   },
   "main": "tasks/nodeunit.js",
   "scripts": {
-    "test": "grunt test && grunt jshint"
+    "test": "grunt test && grunt jshint",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "nodeunit": "^0.9.0"
+    "nodeunit": "^0.11.0",
+    "snyk": "^1.88.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -34,5 +37,6 @@
   "files": [
     "tasks"
   ],
-  "appveyor_id": "8526qwiyaavbfbxh"
+  "appveyor_id": "8526qwiyaavbfbxh",
+  "snyk": true
 }
